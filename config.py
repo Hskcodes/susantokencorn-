@@ -11,8 +11,8 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #force user to join your backup channel leave 0 if you don't need.
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002317451096"))
-FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002010997108"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001956409311"))
+FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002373536270"))
 
 if FORCE_SUB_CHANNEL > FORCE_SUB_CHANNEL2:
     temp = FORCE_SUB_CHANNEL2 
@@ -37,9 +37,9 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "831859341"))
 #port set to default 8080
 PORT = os.environ.get("PORT", "6296")
 #your database url mongodb only You can use mongo atlas free cloud database
-DB_URL = os.environ.get("DB_URL", "mongodb+srv://zbheaven:zbheaven@zbheaven.g6lrq.mongodb.net/?retryWrites=true&w=majority&appName=Zbheaven")
+DB_URL = os.environ.get("DB_URL", "DATABASE_URL", "mongodb+srv://admin:admin@zbcorntoken.v8auw.mongodb.net/?retryWrites=true&w=majority&appName=zbcorntoken")
 #your database name
-DB_NAME = os.environ.get("DB_NAME", "Zbheaven")
+DB_NAME = os.environ.get("DB_NAME", "zbcorntoken")
 
 #for creating telegram thread for bot to improve performance of the bot
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
@@ -61,10 +61,10 @@ https://dashboard.shareus.io/
 # TRUE for yes FALSE if no 
 USE_SHORTLINK = True if os.environ.get('USE_SHORTLINK', "TRUE") == "TRUE" else False 
 # only shareus service known rightnow rest you can test on your own
-SHORTLINK_API_URL = os.environ.get("SHORTLINK_API_URL", "modijiurl.com")
-# SHORTLINK_API_KEY = os.environ.get("SHORTLINK_API_KEY", "2d14ac969b160fd17d577597266d7114228900e8")
+SHORTLINK_API_URL = os.environ.get("SHORTLINK_API_URL", "inshorturl.com")
+# SHORTLINK_API_KEY = os.environ.get("SHORTLINK_API_KEY", "794bdb65da350dfefc8e852eb90ed43ce5605d67")
 #use this key if not working ☠️ (jokin!!)
-SHORTLINK_API_KEY = os.environ.get("SHORTLINK_API_KEY", "2d14ac969b160fd17d577597266d7114228900e8")
+SHORTLINK_API_KEY = os.environ.get("SHORTLINK_API_KEY", "794bdb65da350dfefc8e852eb90ed43ce5605d67")
 #add your custom time in secs for shortlink expiration.
 # 24hr = 86400
 # 12hr = 43200
@@ -82,7 +82,7 @@ TUT_VID = os.environ.get("TUT_VID","https://t.me/how_to_hentai/18")
 #put TRUE if you want this feature
 USE_PAYMENT = True if (True if os.environ.get("USE_PAYMENT", "TRUE") == "TRUE" else False) and (USE_SHORTLINK) else False
 #UPI ID
-UPI_ID = os.environ.get("UPI_ID", "vishwakaneelam@ibl")
+UPI_ID = os.environ.get("UPI_ID", "")
 #UPI QR CODE IMAGE
 UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "")
 #SCREENSHOT URL of ADMIN for verification of payments
@@ -115,7 +115,7 @@ DISABLE_CHANNEL_BUTTON = True if os.environ.get("DISABLE_CHANNEL_BUTTON", "TRUE"
 
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "831859341").split()):
+    for x in (os.environ.get("ADMINS", "831859341 6763725032").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
