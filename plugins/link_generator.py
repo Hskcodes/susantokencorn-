@@ -40,7 +40,7 @@ async def batch(client: Client, message: Message):
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 𝚂𝚑𝚊𝚛𝚎 𝚄𝚁𝙻", url=f'https://telegram.me/share/url?url={link}')]])
-    await second_message.reply_text(f"<b><blockquote><bold>🧑‍💻 𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝙲𝚘𝚍𝚎.<blockquote><bold>\n\n<blockquote><bold>𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 @zblivebot\n\n<code><blockquote><bold>{base64_string}</blockquote></bold></code></blockquote></bold></b>\n\n<b><blockquote><bold>📤𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙻𝚒𝚗𝚔📥</blockquote></bold>\n\n<blockquote><bold>𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 @zblivebot</blockquote></bold></b>\n\n</blockquote><bold>{link}</blockquote></bold>", quote=True, reply_markup=reply_markup)
+    await second_message.reply_text(f"<b><blockquote><bold>🧑‍💻 𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝙲𝚘𝚍𝚎.<blockquote><bold>\n\n<blockquote><bold>𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 @zbnetworkbot\n\n<code><blockquote><bold>{base64_string}</blockquote></bold></code></blockquote></bold></b>\n\n<b><blockquote><bold>📤𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙻𝚒𝚗𝚔📥</blockquote></bold>\n\n<blockquote><bold>𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 @zbnetworkbot</blockquote></bold></b>\n\n</blockquote><bold>{link}</blockquote></bold>", quote=True, reply_markup=reply_markup)
 
 
 
@@ -62,4 +62,4 @@ async def link_generator(client: Client, message: Message):
     base64_string = await encode(f"get-{msg_id * abs(client.db_channel.id)}")
     link = f"https://t.me/{client.username}?start={base64_string}"
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(f"🔁 𝚂𝚑𝚊𝚛𝚎 𝚄𝚁𝙻", url=f'https://telegram.me/share/url?url={link}')]])
-    await channel_message.reply_text(f"<b><blockquote><bold>🧑‍💻 𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝙲𝚘𝚍𝚎.</blockquote></bold>\n\n<blockquote><bold>𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 @zblivebot</blockquote></bold>\n\n<code><blockquote><bold>{base64_string}</blockquote></bold></code></b>\n\n<b><blockquote><bold>📤𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙻𝚒𝚗𝚔📥</blockquote></bold>\n\n<blockquote><bold>𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 @Team_Originals</blockquote></bold></b>\n\n<blockquote><bold>{link}</blockquote></bold>", quote=True, reply_markup=reply_markup)
+    await channel_message.reply_text(f"<b><blockquote><bold>🧑‍💻 𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝙲𝚘𝚍𝚎.</blockquote></bold>\n\n<blockquote><bold>𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 @zbnetworkbot</blockquote></bold>\n\n<code><blockquote><bold>{base64_string}</blockquote></bold></code></b>\n\n<b><blockquote><bold>📤𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙻𝚒𝚗𝚔📥</blockquote></bold>\n\n<blockquote><bold>𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 @zbnetworkbot</blockquote></bold></b>\n\n<blockquote><bold>{link}</blockquote></bold>", quote=True, reply_markup=reply_markup)
